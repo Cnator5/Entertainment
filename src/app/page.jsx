@@ -9,6 +9,7 @@ import WhyChooseUsSection from '@/Components/WhyChooseUsSection/WhyChooseUsSecti
 import ProductsSection from '@/Components/ProductsSection/ProductsSection';
 import Services from '@/Components/ServiceSection/ServiceSection';
 
+
 export default function Home() {
   const [typedText, setTypedText] = useState('');
   const fullText = "Fast Internet. Endless Entertainment.";

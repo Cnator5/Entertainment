@@ -5,7 +5,7 @@ import { Notyf } from "notyf";
 import "notyf/notyf.min.css"; // for React and Vue
 import emailjs from "@emailjs/browser";
 
-const Page = () => {
+const Contact = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
@@ -131,4 +131,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Contact;
