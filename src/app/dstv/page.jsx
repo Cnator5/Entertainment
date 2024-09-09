@@ -309,9 +309,9 @@ const Page = () => {
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-gray-600 mb-4">
-                  "DStv has transformed our family&apos;s entertainment experience.
+                  DStv has transformed our family&apos;s entertainment experience.
                   The variety of channels and the picture quality are simply
-                  amazing!"
+                  amazing!
                 </p>
                 <p className="font-semibold">- Happy Customer {i}</p>
               </div>
@@ -546,9 +546,9 @@ const Page = () => {
             {[1, 2].map((i) => (
               <div key={i} className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-gray-600 mb-4">
-                  "DStv has brought our family closer together. We love our
+                  DStv has brought our family closer together. We love our
                   movie nights and cheering for our favorite teams during live
-                  sports events."
+                  sports events.
                 </p>
                 <div className="flex items-center">
                   <Image

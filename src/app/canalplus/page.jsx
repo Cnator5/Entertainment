@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -11,29 +12,29 @@ export default function Page() {
 
       <header className="bg-black text-white py-4 sticky top-0 z-50">
         <nav className="container mx-auto flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold">
-            Canal+ Experts
-          </a>
+          <Link href="/">
+            <a className="text-2xl font-bold">Canal+ Experts</a>
+          </Link>
           <ul className="flex space-x-6">
             <li>
-              <a href="/packages" className="hover:text-gray-300">
-                Packages
-              </a>
+              <Link href="/packages">
+                <a className="hover:text-gray-300">Packages</a>
+              </Link>
             </li>
             <li>
-              <a href="/installation" className="hover:text-gray-300">
-                Installation
-              </a>
+              <Link href="/installation">
+                <a className="hover:text-gray-300">Installation</a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-gray-300">
-                About Us
-              </a>
+              <Link href="/about">
+                <a className="hover:text-gray-300">About Us</a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-300">
-                Contact
-              </a>
+              <Link href="/contact">
+                <a className="hover:text-gray-300">Contact</a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -52,11 +53,10 @@ export default function Page() {
             />
           </div>
           <div className="relative z-10 text-center">
-            <Link
-              href="#packages"
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300"
-            >
-              Explore Packages
+            <Link href="#packages">
+              <a className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300">
+                Explore Packages
+              </a>
             </Link>
           </div>
         </section>
@@ -120,12 +120,11 @@ export default function Page() {
                   <li className="mb-2">✓ HD quality</li>
                   <li className="mb-2">✓ 7-day replay</li>
                 </ul>
-                <a
-                  href="#"
-                  className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-                >
-                  Subscribe Now
-                </a>
+                <Link href="#">
+                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Subscribe Now
+                  </a>
+                </Link>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-blue-600">
                 <h3 className="text-2xl font-semibold mb-4">Premium</h3>
@@ -138,12 +137,11 @@ export default function Page() {
                   <li className="mb-2">✓ 30-day replay</li>
                   <li className="mb-2">✓ Exclusive sports events</li>
                 </ul>
-                <a
-                  href="#"
-                  className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-                >
-                  Subscribe Now
-                </a>
+                <Link href="#">
+                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Subscribe Now
+                  </a>
+                </Link>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-semibold mb-4">Family</h3>
@@ -157,12 +155,11 @@ export default function Page() {
                   <li className="mb-2">✓ Multiple device streaming</li>
                   <li className="mb-2">✓ Parental controls</li>
                 </ul>
-                <a
-                  href="#"
-                  className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-                >
-                  Subscribe Now
-                </a>
+                <Link href="#">
+                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Subscribe Now
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -200,7 +197,8 @@ export default function Page() {
                 />
                 <h3 className="text-2xl font-semibold mb-4">Ongoing Support</h3>
                 <p className="mb-4">
-                  We&apos;re here for you long after the installation is complete.
+                  We&apos;re here for you long after the installation is
+                  complete.
                 </p>
                 <ul className="list-disc list-inside mb-4">
                   <li>24/7 customer support</li>
@@ -210,12 +208,11 @@ export default function Page() {
               </div>
             </div>
             <div className="text-center mt-8">
-              <a
-                href="#"
-                className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300"
-              >
-                Schedule Installation
-              </a>
+              <Link href="#">
+                <a className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">
+                  Schedule Installation
+                </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -229,22 +226,22 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="mb-4">
-                  "The installation was quick and professional. I&apos;m loving my
-                  new Canal+ experience!"
+                  The installation was quick and professional. I&apos;m loving
+                  my new Canal+ experience!
                 </p>
                 <p className="font-semibold">- Sarah T.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="mb-4">
-                  "Incredible selection of content. Canal+ has transformed our
-                  family movie nights!"
+                  Incredible selection of content. Canal+ has transformed our
+                  family movie nights!
                 </p>
                 <p className="font-semibold">- Michael R.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="mb-4">
-                  "The 4K quality is mind-blowing. I feel like I&apos;m right there
-                  at the stadium!"
+                  The 4K quality is mind-blowing. I feel like I&apos;m right
+                  there at the stadium!
                 </p>
                 <p className="font-semibold">- Emma L.</p>
               </div>
@@ -272,8 +269,8 @@ export default function Page() {
                 </h3>
                 <p className="mb-4">
                   With over a decade of experience in the entertainment
-                  industry, we&apos;ve helped thousands of customers elevate their
-                  viewing experience with Canal+.
+                  industry, we&apos;ve helped thousands of customers elevate
+                  their viewing experience with Canal+.
                 </p>
                 <p className="mb-4">
                   Our mission is to bring world-class entertainment to every
@@ -335,19 +332,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Additional sections can be added here to reach the requested 50+ sections */}
-        {/* Example additional sections: */}
-        {/* - Special Offers */}
-        {/* - Canal+ App Features */}
-        {/* - Comparison with Competitors */}
-        {/* - Customer Success Stories */}
-        {/* - Behind the Scenes at Canal+ */}
-        {/* - Upcoming Content Preview */}
-        {/* - Technical Specifications */}
-        {/* - Awards and Recognitions */}
-        {/* - Community Involvement */}
-        {/* - Career Opportunities */}
-        {/* ... and so on */}
+        {/* Additional sections can be added here */}
       </main>
     </div>
   );

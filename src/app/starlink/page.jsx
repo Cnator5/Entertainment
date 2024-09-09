@@ -1,9 +1,9 @@
 // pages/Starlink.js
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import WhyChooseStarLink from "@/Components/WhyChooseStarLink/WhyChooseStarLink";
+import React fromreact";
+import Head fromnext/head";
+import Link fromnext/link";
+import Image fromnext/image";
+import WhyChooseStarLink from@/Components/WhyChooseStarLink/WhyChooseStarLink";
 
 const Page = () => {
   return (
@@ -195,23 +195,23 @@ const Page = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-100 rounded-lg p-8">
                 <p className="text-lg mb-4">
-                  "StarLink has transformed our rural life. We finally have
-                  internet speeds that rival urban areas!"
+                 StarLink has transformed our rural life. We finally have
+                  internet speeds that rival urban areas!
                 </p>
                 <p className="font-semibold">- John D., Farmer</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-8">
                 <p className="text-lg mb-4">
-                  "As a remote worker, StarLink has been a game-changer. Video
+                 As a remote worker, StarLink has been a game-changer. Video
                   calls are smooth, and I can access cloud services without any
-                  lag."
+                  lag.
                 </p>
                 <p className="font-semibold">- Sarah M., Software Developer</p>
               </div>
               <div className="bg-gray-100 rounded-lg p-8">
                 <p className="text-lg mb-4">
-                  "Our small business in a remote area now operates as
-                  efficiently as any city-based company, thanks to StarLink."
+                 Our small business in a remote area now operates as
+                  efficiently as any city-based company, thanks to StarLink.
                 </p>
                 <p className="font-semibold">
                   - Robert L., Small Business Owner
