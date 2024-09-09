@@ -18,14 +18,14 @@ const MotionLink = motion(Link);
 
 const IconButton = ({ Icon }) => {
   return (
-    <motion.a
+    <motion
       href="#"
       className="bg-blue-500 p-2 rounded-full hover:bg-blue-600 transition-colors"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
       <Icon className="w-5 h-5" />
-    </motion.a>
+    </motion>
   );
 };
 

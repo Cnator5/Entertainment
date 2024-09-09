@@ -16,7 +16,7 @@ const Page = () => {
         />
       </Head>
 
-      <div className="bg-gray-100 mt-20">
+      <div className="bg-gray-100">
         {/* Hero Section */}
         <section className="relative h-[80vh] flex items-center justify-center text-white">
           <div className="absolute inset-0 z-0">

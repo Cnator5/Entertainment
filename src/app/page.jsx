@@ -61,7 +61,7 @@ export default function Home() {
   }, [images.length]);  
   return (
 <main>
-<div className="relative h-[80vh] w-full overflow-hidden mt-20">
+<div className="relative h-[80vh] w-full overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}
