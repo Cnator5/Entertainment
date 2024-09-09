@@ -267,7 +267,7 @@ export default function Page() {
                 },
               ].map((testimonial, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-md">
-                  <p className="text-gray-600 mb-4">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 mb-4">{testimonial.quote}</p>
                   <p className="font-semibold">- {testimonial.name}</p>
                 </div>
               ))}
