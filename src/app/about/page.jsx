@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -42,12 +43,12 @@ export default function Page() {
               Discover how we&apos;re revolutionizing technology and
               entertainment solutions
             </p>
-            <a
+            <Link
               href="#"
               className="bg-white text-blue-600 py-2 px-6 rounded-full font-semibold hover:bg-blue-50 transition duration-300"
             >
               Explore Our Services
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -318,12 +319,12 @@ export default function Page() {
               Contact us today to learn more about our services and how we can
               help you stay connected.
             </p>
-            <a
+            <Link
               href="#"
               className="bg-white text-blue-600 py-2 px-6 rounded-full font-semibold hover:bg-blue-50 transition duration-300"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
         </section>
 

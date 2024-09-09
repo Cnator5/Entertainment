@@ -13,27 +13,27 @@ export default function Page() {
       <header className="bg-black text-white py-4 sticky top-0 z-50">
         <nav className="container mx-auto flex justify-between items-center">
           <Link href="/">
-            <a className="text-2xl font-bold">Canal+ Experts</a>
+            <button className="text-2xl font-bold">Canal+ Experts</button>
           </Link>
           <ul className="flex space-x-6">
             <li>
               <Link href="/packages">
-                <a className="hover:text-gray-300">Packages</a>
+                <button className="hover:text-gray-300">Packages</button>
               </Link>
             </li>
             <li>
               <Link href="/installation">
-                <a className="hover:text-gray-300">Installation</a>
+                <button className="hover:text-gray-300">Installation</button>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a className="hover:text-gray-300">About Us</a>
+                <button className="hover:text-gray-300">About Us</button>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <a className="hover:text-gray-300">Contact</a>
+                <button className="hover:text-gray-300">Contact</button>
               </Link>
             </li>
           </ul>
@@ -54,9 +54,9 @@ export default function Page() {
           </div>
           <div className="relative z-10 text-center">
             <Link href="#packages">
-              <a className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300">
                 Explore Packages
-              </a>
+              </button>
             </Link>
           </div>
         </section>
@@ -121,9 +121,9 @@ export default function Page() {
                   <li className="mb-2">✓ 7-day replay</li>
                 </ul>
                 <Link href="#">
-                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                  <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
-                  </a>
+                  </button>
                 </Link>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-blue-600">
@@ -138,9 +138,9 @@ export default function Page() {
                   <li className="mb-2">✓ Exclusive sports events</li>
                 </ul>
                 <Link href="#">
-                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                  <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
-                  </a>
+                  </button>
                 </Link>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
@@ -156,9 +156,9 @@ export default function Page() {
                   <li className="mb-2">✓ Parental controls</li>
                 </ul>
                 <Link href="#">
-                  <a className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                  <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
-                  </a>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -209,9 +209,9 @@ export default function Page() {
             </div>
             <div className="text-center mt-8">
               <Link href="#">
-                <a className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">
                   Schedule Installation
-                </a>
+                </button>
               </Link>
             </div>
           </div>
