@@ -1,9 +1,9 @@
 // pages/Starlink.js
-import React fromreact";
-import Head fromnext/head";
-import Link fromnext/link";
-import Image fromnext/image";
-import WhyChooseStarLink from@/Components/WhyChooseStarLink/WhyChooseStarLink";
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import WhyChooseStarLink from "@/Components/WhyChooseStarLink/WhyChooseStarLink";
 
 const Page = () => {
   return (
