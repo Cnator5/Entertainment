@@ -39,8 +39,8 @@ export default function Page() {
               Connecting You to the Future
             </h1>
             <p className="text-xl mb-8">
-              Discover how we&apos;re revolutionizing technology and entertainment
-              solutions
+              Discover how we&apos;re revolutionizing technology and
+              entertainment solutions
             </p>
             <a
               href="#"
@@ -283,9 +283,9 @@ export default function Page() {
             </h2>
             <div className="max-w-2xl mx-auto">
               <p className="text-gray-600 text-center mb-8">
-                We&apos;re proud to serve customers across multiple regions, bringing
-                innovative technology and entertainment solutions to both urban
-                and rural areas.
+                We&apos;re proud to serve customers across multiple regions,
+                bringing innovative technology and entertainment solutions to
+                both urban and rural areas.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                 {[
