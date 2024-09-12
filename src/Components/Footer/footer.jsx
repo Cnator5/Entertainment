@@ -65,6 +65,16 @@ export default function Footer() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const SocialIcon = ({ href, Icon }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
+    >
+      <Icon className="w-5 h-5" />
+    </a>
+  );
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-12 relative">
       <div className="container mx-auto px-4">
@@ -86,17 +96,17 @@ export default function Footer() {
             >
               Bringing cutting-edge connectivity and entertainment solutions to your doorstep. Experience the future of communication with AbaSatellite.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex space-x-4"
-            >
-              <SocialIcon href="https://facebook.com" Icon={FaFacebookF} />
-              <SocialIcon href="https://twitter.com" Icon={FaTwitter} />
-              <SocialIcon href="https://instagram.com" Icon={FaInstagram} />
-              <SocialIcon href="https://linkedin.com" Icon={FaLinkedinIn} />
-            </motion.div>
+            <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      className="flex space-x-4"
+    >
+      <SocialIcon href="https://facebook.com" Icon={FaFacebookF} />
+      <SocialIcon href="https://twitter.com" Icon={FaTwitter} />
+      <SocialIcon href="https://instagram.com" Icon={FaInstagram} />
+      <SocialIcon href="https://linkedin.com" Icon={FaLinkedinIn} />
+    </motion.div>
           </FooterSection>
 
           <FooterSection title="Quick Links">
