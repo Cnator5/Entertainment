@@ -110,3 +110,45 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out;
 }
+
+/* styles/globals.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #0070f3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --primary-color: #00b7ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle.dark {
+  color: var(--text-color);
+}
+
+.dark-mode-toggle.light {
+  color: var(--text-color);
+}

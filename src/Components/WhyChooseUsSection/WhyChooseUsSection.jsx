@@ -7,27 +7,27 @@ const WhyChooseUsSection = () => {
     {
       title: 'Unmatched Expertise',
       description: 'Our team of elite professionals brings decades of combined experience in cutting-edge network solutions.',
-      icon: '/icons/expertise.svg',
+      image: '/images/satellite.jpg',
     },
     {
       title: 'Innovative Technology',
       description: 'We leverage state-of-the-art technologies to deliver unparalleled performance and ironclad security.',
-      icon: '/icons/technology.png',
+      image: '/images/global-coverage.jpg',
     },
     {
       title: '24/7 Dedicated Support',
       description: 'Our round-the-clock support team ensures your network runs smoothly, addressing issues before they arise.',
-      icon: '/image/support.svg',
+      image: '/images/support.png',
     },
     {
       title: 'Tailor-Made Solutions',
       description: 'We craft bespoke network architectures that align perfectly with your unique business objectives.',
-      icon: '/icons/custom.svg',
+      image: '/images/star_link_accessories_actuated_short_wall_mount top.webp',
     },
   ];
 
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-24">
+    <section className="bg-gradient-to-b from-blue-100 to-white py-24">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
@@ -46,20 +46,16 @@ const WhyChooseUsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="p-8">
-                <motion.div 
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-6"
-                >
-                  <Image
-                    src={reason.icon}
-                    alt={reason.title}
-                    width={40}
-                    height={40}
-                    className="text-blue-600"
-                  />
-                </motion.div>
+              <div className="relative h-48 w-full mb-4">
+                <Image
+                  src={reason.image}
+                  alt={reason.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 transform hover:scale-110"
+                />
+              </div>
+              <div className="p-6 bg-blue-50">
                 <h3 className="text-xl font-semibold text-blue-800 text-center mb-4">{reason.title}</h3>
                 <p className="text-gray-600 text-center">{reason.description}</p>
               </div>

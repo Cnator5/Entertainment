@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -60,7 +60,7 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -70,14 +70,33 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <FooterSection title="About Us">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">AbaSatellite</h3>
-            <p className="mb-4">Bringing cutting-edge connectivity and entertainment solutions to your doorstep. Experience the future of communication with AbaSatellite.</p>
-            <div className="flex space-x-4">
+            <motion.h3
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-2xl font-bold text-blue-400 mb-4"
+            >
+              AbaSatellite
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-4"
+            >
+              Bringing cutting-edge connectivity and entertainment solutions to your doorstep. Experience the future of communication with AbaSatellite.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex space-x-4"
+            >
               <SocialIcon href="https://facebook.com" Icon={FaFacebookF} />
               <SocialIcon href="https://twitter.com" Icon={FaTwitter} />
               <SocialIcon href="https://instagram.com" Icon={FaInstagram} />
               <SocialIcon href="https://linkedin.com" Icon={FaLinkedinIn} />
-            </div>
+            </motion.div>
           </FooterSection>
 
           <FooterSection title="Quick Links">
@@ -104,18 +123,33 @@ export default function Footer() {
 
           <FooterSection title="Contact Us">
             <ul className="space-y-2">
-              <li className="flex items-center">
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex items-center"
+              >
                 <FaMapMarkerAlt className="mr-2 text-blue-400" />
                 <span>237 Connectivity Street, Molyko, Buea</span>
-              </li>
-              <li className="flex items-center">
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex items-center"
+              >
                 <FaPhone className="mr-2 text-blue-400" />
                 <span>(237) 681 326 315</span>
-              </li>
-              <li className="flex items-center">
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex items-center"
+              >
                 <FaEnvelope className="mr-2 text-blue-400" />
                 <span>info@abasatellite.com</span>
-              </li>
+              </motion.li>
             </ul>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -127,7 +161,12 @@ export default function Footer() {
           </FooterSection>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="border-t border-gray-800 mt-8 pt-8 text-center"
+        >
           <p>&copy; {currentYear} AbaSatellite. All rights reserved.</p>
           <p className="mt-2 text-sm text-gray-400">
             Designed with ❤️ by AbaSatellite Team | 
@@ -138,7 +177,7 @@ export default function Footer() {
               Terms of Service
             </Link>
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <AnimatePresence>

@@ -6,9 +6,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import TestimonialCarousel from '@/Components/TestimonialCarousel/TestimonialCarousel';
 import WhyChooseUsSection from '@/Components/WhyChooseUsSection/WhyChooseUsSection';
-import ProductsSection from '@/Components/ProductsSection/ProductsSection';
+import ProductsSection from '@/Components/ImageShowcaseSection/ImageShowcaseSection';
 import Services from '@/Components/ServiceSection/ServiceSection';
 
+import ImageShowcaseSection from './../Components/ImageShowcaseSection/ImageShowcaseSection';
 
 export default function Home() {
   const [typedText, setTypedText] = useState('');
@@ -125,7 +126,7 @@ export default function Home() {
                 `}</style>
     
     </div>
-     <ProductsSection />
+    <ImageShowcaseSection />
 <WhyChooseUsSection/>
 <Services/>
 <TestimonialCarousel/>
