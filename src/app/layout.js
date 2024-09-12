@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/Components/Navbar/navBar";
 import Footer from "@/Components/Footer/footer";
 import 'tailwindcss/tailwind.css';
+import Navbar from './../Components/Navbar/NavBar';
 
 
 
