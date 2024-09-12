@@ -87,7 +87,7 @@ export default function Home() {
         <p className="text-lg md:text-2xl mb-6 max-w-2xl animate-fade-in-up animation-delay-300 shadow-text">
           Your one-stop solution for Satellite, Canal+, DStv, Solar, and Network Services.
         </p>
-        <Link href="/Contact" >
+        <Link href="/contact" >
           <span className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 animate-fade-in-up animation-delay-600 cursor-pointer">
             Get in Touch
           </span>
