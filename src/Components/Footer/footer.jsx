@@ -66,14 +66,14 @@ export default function Footer() {
   }, []);
 
   const SocialIcon = ({ href, Icon }) => (
-    <a
+    <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
     >
       <Icon className="w-5 h-5" />
-    </a>
+    </Link>
   );
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-12 relative">
