@@ -1,19 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductCard = ({
-  name,
-  price,
-  description,
-  features,
-  icon,
-  image,
-  slug,
-}) => (
+const ProductCard = ({ name, price, description, features, icon, image, slug }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row"
     initial={{ opacity: 0, y: 50 }}
@@ -50,13 +42,13 @@ const ProductCard = ({
         ))}
       </ul>
       <Link href={`/products/${slug}`} passHref>
-        <motion.a
+        <motion.button
           className="bg-indigo-600 text-white font-bold py-2 px-4 rounded-full hover:bg-indigo-700 transition duration-300 text-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           Get Started
-        </motion.a>
+        </motion.button>
       </Link>
     </div>
     <div className="relative w-full md:w-1/3 h-64 md:h-auto overflow-hidden rounded-lg">
@@ -91,126 +83,127 @@ const ProductSelector = ({ products, activeProduct, setActiveProduct }) => (
   </div>
 );
 
-export default function ProductsSection() {
-  const [products] = useState([
-    {
-      name: "Starlink",
-      price: "500,000 FCFA",
-      description: "High-speed satellite internet for seamless connectivity.",
-      features: [
-        "Up to 150 Mbps download speed",
-        "Low latency for real-time applications",
-        "Easy self-installation",
-        "24/7 customer support",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      image: "/images/starlink_good.jpg",
-      slug: "starlink",
-    },
-    {
-      name: "Canal+",
-      price: "25,000 FCFA/month",
-      description: "Premium French and African content for your entertainment.",
-      features: [
-        "200+ TV channels",
-        "Movies, series, and documentaries",
-        "Sports coverage",
-        "Multiple device streaming",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-      image: "/images/canalplusnew.webp",
-      slug: "canal-plus",
-    },
-    {
-      name: "DSTV",
-      price: "5,000 FCFA/month",
-      description: "Diverse international content for the whole family.",
-      features: [
-        "150+ TV channels",
-        "Live sports events",
-        "Kids programming",
-        "HD and Full HD channels",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-      image: "/images/Dstv_good.jpg",
-      slug: "dstv",
-    },
-    {
-      name: "Solar Panels",
-      price: "From 50,000 to 1,000,000 FCFA",
-      description: "Sustainable energy solutions for your home or business.",
-      features: [
-        "Customizable system sizes",
-        "Reduces electricity bills",
-        "Environmentally friendly",
-        "Low maintenance",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-        </svg>
-      ),
-      image: "/images/solar.webp",
-      slug: "solar-panels",
-    },
-  ]);
+const productsData = [
+  {
+    name: "Starlink",
+    price: "500,000 FCFA",
+    description: "High-speed satellite internet for seamless connectivity.",
+    features: [
+      "Up to 150 Mbps download speed",
+      "Low latency for real-time applications",
+      "Easy self-installation",
+      "24/7 customer support",
+    ],
+    icon: (
+      <svg
+        className="w-12 h-12"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
+      </svg>
+    ),
+    image: "/images/starlink_good.jpg",
+    slug: "starlink",
+  },
+  {
+    name: "Canal+",
+    price: "25,000 FCFA/month",
+    description: "Premium French and African content for your entertainment.",
+    features: [
+      "200+ TV channels",
+      "Movies, series, and documentaries",
+      "Sports coverage",
+      "Multiple device streaming",
+    ],
+    icon: (
+      <svg
+        className="w-12 h-12"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+    image: "/images/canalplusnew.webp",
+    slug: "canal-plus",
+  },
+  {
+    name: "DSTV",
+    price: "5,000 FCFA/month",
+    description: "Diverse international content for the whole family.",
+    features: [
+      "150+ TV channels",
+      "Live sports events",
+      "Kids programming",
+      "HD and Full HD channels",
+    ],
+    icon: (
+      <svg
+        className="w-12 h-12"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+    image: "/images/Dstv_good.jpg",
+    slug: "dstv",
+  },
+  {
+    name: "Solar Panels",
+    price: "From 50,000 to 1,000,000 FCFA",
+    description: "Sustainable energy solutions for your home or business.",
+    features: [
+      "Customizable system sizes",
+      "Reduces electricity bills",
+      "Environmentally friendly",
+      "Low maintenance",
+    ],
+    icon: (
+      <svg
+        className="w-12 h-12"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        />
+      </svg>
+    ),
+    image: "/images/solar.webp",
+    slug: "solar-panels",
+  },
+];
 
+export default function ProductsSection() {
+  const [products] = useState(productsData);
   const [activeProduct, setActiveProduct] = useState(products[0].name);
 
   return (
@@ -230,8 +223,7 @@ export default function ProductsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Discover the perfect solution for your connectivity and entertainment
-          needs
+          Discover the perfect solution for your connectivity and entertainment needs
         </motion.p>
 
         <ProductSelector
