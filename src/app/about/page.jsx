@@ -26,7 +26,7 @@ export default function About() {
                 Connecting You to the Future
               </h1>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Discover how we're revolutionizing technology and entertainment solutions
+                Discover how we are revolutionizing technology and entertainment solutions
               </p>
               <Link
                 href="/Contact"
@@ -51,7 +51,7 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-gray-700 text-center max-w-3xl mx-auto text-lg">
-                At Your Company Name, we're committed to bridging the digital
+                At Your Company Name, we are committed to bridging the digital
                 divide and bringing cutting-edge technology and entertainment to
                 every home. Our mission is to empower individuals and communities
                 through innovative connectivity solutions and unparalleled content
@@ -73,7 +73,7 @@ export default function About() {
                   title: "Starlink",
                   icon: "🛰️",
                   description:
-                    "Experience lightning-fast internet anywhere with Starlink's cutting-edge satellite technology.",
+                    "Experience lightning-fast internet anywhere with Starlink cutting-edge satellite technology.",
                 },
                 {
                   title: "Canal+",
