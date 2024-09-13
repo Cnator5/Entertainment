@@ -32,8 +32,8 @@ const Contact = () => {
       );
   };
   return (
-    <div className="flex h-[100vh] items-center justify-center flex-col md:flex-row gap-8 p-6 md:p-12 bg-gray-900 mt-20">
-      <div className="flex-1 mt-20">
+    <div className="flex h-[100vh] items-center justify-center flex-col md:flex-row gap-8 p-6 md:p-12 bg-gray-900">
+      <div className="flex-1">
         <form
           ref={form}
           onSubmit={handleSubmit}
