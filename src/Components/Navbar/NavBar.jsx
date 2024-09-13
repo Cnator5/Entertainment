@@ -30,7 +30,7 @@ const Navbar = () => {
     { name: "StarLink", path: "/starlink" },
     { name: "Canal+", path: "/canalplus" },
     { name: "DStv", path: "/dstv" },
-    { name: "Solar", path: "/solar" },
+    // { name: "Solar", path: "/solar" },
     // { name: "Contact", path: "/contact" },
     // { name: "About Us", path: "/about" },
     // { name: 'Services', path: '/Services' }

@@ -41,26 +41,26 @@ export default function Page() {
       </header>
 
       <main>
-        {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center text-white">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/canalplus.webp"
-              alt="StarLink Satellite"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-          <div className="relative z-10 text-center">
-            <Link href="#packages">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300">
-                Explore Packages
-              </button>
-            </Link>
-          </div>
-        </section>
-
+      {/* Hero Section */}
+<section className="relative h-[60vh] flex items-center justify-center text-white bg-black">
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/images/canalplus.jpg"
+      alt="StarLink Satellite"
+      layout="fill"
+      objectFit="cover"
+      quality={100}
+      className="opacity-70" // Added opacity to blend with the black background
+    />
+  </div>
+  <div className="relative z-10 text-center">
+    <Link href="#packages">
+      <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300">
+        Explore Packages
+      </button>
+    </Link>
+  </div>
+</section>
         {/* Featured Content Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto">
@@ -70,7 +70,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-100 rounded-lg p-6 text-center">
                 <img
-                  src="/placeholder-movie.jpg"
+                  src="/images/placeholder-movie.jpg"
                   alt="Latest Movies"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -81,7 +81,7 @@ export default function Page() {
               </div>
               <div className="bg-gray-100 rounded-lg p-6 text-center">
                 <img
-                  src="/placeholder-sports.jpg"
+                  src="/images/placeholder-sports.jpg"
                   alt="Live Sports"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -90,7 +90,7 @@ export default function Page() {
               </div>
               <div className="bg-gray-100 rounded-lg p-6 text-center">
                 <img
-                  src="/placeholder-series.jpg"
+                  src="/images/placeholder-series.avif"
                   alt="Original Series"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -120,7 +120,7 @@ export default function Page() {
                   <li className="mb-2">✓ HD quality</li>
                   <li className="mb-2">✓ 7-day replay</li>
                 </ul>
-                <Link href="#">
+                <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
@@ -137,7 +137,7 @@ export default function Page() {
                   <li className="mb-2">✓ 30-day replay</li>
                   <li className="mb-2">✓ Exclusive sports events</li>
                 </ul>
-                <Link href="#">
+                <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
@@ -155,7 +155,7 @@ export default function Page() {
                   <li className="mb-2">✓ Multiple device streaming</li>
                   <li className="mb-2">✓ Parental controls</li>
                 </ul>
-                <Link href="#">
+                <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
@@ -174,7 +174,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <img
-                  src="/placeholder-installation.jpg"
+                  src="/images/placeholder-installation.webp"
                   alt="Professional Installation"
                   className="w-full h-64 object-cover rounded-lg mb-4"
                 />
@@ -191,7 +191,7 @@ export default function Page() {
               </div>
               <div>
                 <img
-                  src="/placeholder-support.jpg"
+                  src="/images/placeholder-support.jpeg"
                   alt="Customer Support"
                   className="w-full h-64 object-cover rounded-lg mb-4"
                 />
@@ -208,7 +208,7 @@ export default function Page() {
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link href="#">
+              <Link href="/contact">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">
                   Schedule Installation
                 </button>
@@ -258,7 +258,7 @@ export default function Page() {
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <img
-                  src="/placeholder-team.jpg"
+                  src="/images/placeholder-team.jpeg"
                   alt="Our Team"
                   className="w-full rounded-lg shadow-lg"
                 />
