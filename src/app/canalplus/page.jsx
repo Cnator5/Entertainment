@@ -191,7 +191,7 @@ export default function Page() {
               </div>
               <div>
                 <img
-                  src="/images/placeholder-support.jpeg"
+                  src="/images/placeholder-movie.jpg"
                   alt="Customer Support"
                   className="w-full h-64 object-cover rounded-lg mb-4"
                 />
