@@ -7,6 +7,14 @@ const ImageShowcaseSection = () => {
     { src: '/images/starlink-installation2.jpg', alt: 'Starlink Satellite Dish', title: 'Starlink' },
     { src: '/images/Dstv-Now-App.jpg', alt: 'DStv Decoder', title: 'DStv' },
     { src: '/images/canal-plus-subscription.webp', alt: 'Canal+ Receiver', title: 'Canal+' },
+    { src: '/images/cover-web (1).webp', alt: 'Canal+ Receiver', title: 'Canal+' },
+    { src: '/images/img-canal-channels.webp', alt: 'Canal+ Receiver', title: 'Canal+' },
+    { src: '/images/gettyimages-1230967337-612x612.jpg', alt: 'Canal+ Receiver', title: 'Canal+' },
+    { src: '/images/02LcXChSEOj1be2FWBxlQ7V-1.webp', alt: 'Starlink Satellite Dish', title: 'Starlink' },
+    { src: '/images/starlink-growth.png', alt: 'Starlink Satellite Dish', title: 'Starlink' },
+    { src: '/images/Starlink-Mini-cover.jpg', alt: 'Starlink Satellite Dish', title: 'Starlink' },
+    { src: '/images/loggedout_devices.eb77c13d871dcc8d.png', alt: 'DStv Decoder', title: 'DStv' },
+    { src: '/images/loggedout_settings.a219ad0d0bb56947.png', alt: 'DStv Decoder', title: 'DStv' },
   ];
 
   return (

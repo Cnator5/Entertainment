@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [canalDropdownOpen, setCanalDropdownOpen] = useState(false);
@@ -165,4 +165,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
