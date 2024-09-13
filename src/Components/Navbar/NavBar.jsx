@@ -30,27 +30,15 @@ const NavBar = () => {
     { name: "StarLink", path: "/starlink" },
     { name: "Canal+", path: "/canalplus" },
     { name: "DStv", path: "/dstv" },
-    // { name: "Solar", path: "/solar" },
-    // { name: "Contact", path: "/contact" },
-    // { name: "About Us", path: "/about" },
-    // { name: 'Services', path: '/Services' }
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-indigo-900 shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-indigo-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span
-                className={`font-bold text-2xl tracking-tight ${
-                  scrolled ? "text-white" : "text-indigo-900"
-                }`}
-              >
+              <span className="font-bold text-2xl tracking-tight text-white">
                 AbaSatellite
               </span>
             </Link>
@@ -61,11 +49,7 @@ const NavBar = () => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${
-                    scrolled
-                      ? "text-gray-300 hover:bg-indigo-700 hover:text-white"
-                      : "text-indigo-900 hover:bg-indigo-100"
-                  } transition-colors duration-300`}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-indigo-700 hover:text-white transition-colors duration-300"
                 >
                   {item.name}
                 </Link>
@@ -75,11 +59,7 @@ const NavBar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className={`inline-flex items-center justify-center p-2 rounded-md ${
-                scrolled
-                  ? "text-indigo-200 hover:text-white hover:bg-indigo-700"
-                  : "text-indigo-900 hover:text-white hover:bg-indigo-100"
-              } focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300`}
+              className="inline-flex items-center justify-center p-2 rounded-md text-indigo-200 hover:text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
             >
               <svg
                 className="h-6 w-6"
