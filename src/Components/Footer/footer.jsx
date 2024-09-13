@@ -161,6 +161,7 @@ export default function Footer() {
                 <span>info@abasatellite.com</span>
               </motion.li>
             </ul>
+            <Link href="/contact">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -168,6 +169,7 @@ export default function Footer() {
             >
               Get a Quote
             </motion.button>
+            </Link>
           </FooterSection>
         </div>
 

@@ -129,7 +129,7 @@ const Page = () => {
         </Section>
 
         {/* Premium Channels Showcase */}
-        <Section title="Premium Channels" bgColor="bg-gray-100">
+        {/* <Section title="Premium Channels" bgColor="bg-gray-100">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "M-Net",
@@ -158,12 +158,12 @@ const Page = () => {
               </div>
             ))}
           </div>
-        </Section>
+        </Section> */}
 
         {/* Sports Coverage */}
         <Section title="Unrivaled Sports Coverage">
           <ImageSection
-            src="/images/sports-coverage.jpg"
+            src="/images/sport-football-arena-photography_1409-4807.avif"
             alt="DStv Sports Coverage"
             title="Your Front-Row Seat to Global Sports"
             description="With DStv, you&apos;ll never miss a moment of your favorite sports. Enjoy live coverage of Premier League, UEFA Champions League, Formula 1, NBA, and much more!"
@@ -173,7 +173,7 @@ const Page = () => {
         {/* Movie Experience */}
         <Section title="Blockbuster Movie Experience" bgColor="bg-gray-100">
           <ImageSection
-            src="/images/movie-experience.jpg"
+            src="/images/placeholder-team.webp"
             alt="DStv Movie Experience"
             title="Hollywood at Home"
             description="Immerse yourself in the latest blockbusters, timeless classics, and exclusive premieres. DStv brings the cinema experience right to your living room."
@@ -184,7 +184,7 @@ const Page = () => {
         {/* Kids Entertainment */}
         <Section title="Kids Entertainment">
           <ImageSection
-            src="/images/kids-entertainment.jpg"
+            src="/images/Dstv-Now-App.jpg"
             alt="DStv Kids Entertainment"
             title="Safe and Engaging Content for Kids"
             description="Keep your children entertained and educated with DStv&apos;s wide range of kid-friendly channels, featuring popular shows, cartoons, and educational programming."
@@ -194,7 +194,7 @@ const Page = () => {
         {/* News and Documentaries */}
         <Section title="Stay Informed" bgColor="bg-gray-100">
           <ImageSection
-            src="/images/news-documentaries.jpg"
+            src="/images/Dstv_good.jpg"
             alt="DStv News and Documentaries"
             title="24/7 News and Thought-Provoking Documentaries"
             description="Stay up-to-date with current events and explore the world through DStv&apos;s comprehensive news coverage and captivating documentaries."
@@ -227,7 +227,7 @@ const Page = () => {
         {/* DStv Now */}
         <Section title="DStv Now - TV on the Go" bgColor="bg-gray-100">
           <ImageSection
-            src="/images/dstv-now.jpg"
+            src="/images/placeholder-team.webp"
             alt="DStv Now"
             title="Your Favorite Shows, Anytime, Anywhere"
             description="With DStv Now, you can stream live TV, catch up on missed shows, and access a vast library of on-demand content on your smartphone, tablet, or computer."
@@ -237,7 +237,7 @@ const Page = () => {
         {/* Box Office */}
         <Section title="DStv Box Office">
           <ImageSection
-            src="/images/box-office.jpg"
+            src="/images/Dstv-Now-App.jpg"
             alt="DStv Box Office"
             title="Latest Movies at Your Fingertips"
             description="Rent the latest Hollywood blockbusters and popular movies from the comfort of your home with DStv Box Office. New titles added regularly!"
@@ -248,7 +248,7 @@ const Page = () => {
         {/* Catch Up */}
         <Section title="Never Miss a Show with Catch Up" bgColor="bg-gray-100">
           <ImageSection
-            src="/images/catch-up.jpg"
+            src="/images/placeholder-team.webp"
             alt="DStv Catch Up"
             title="Your Personal Time Machine"
             description="Missed your favorite show? No problem! With DStv Catch Up, you can watch a wide selection of programs at your convenience."
@@ -259,7 +259,7 @@ const Page = () => {
 
         <Section title="DStv App - Your Personal TV Guide">
           <ImageSection
-            src="/images/dstv-app.jpg"
+            src="/images/placeholder-team.jpeg"
             alt="DStv App"
             title="Smart TV Control in Your Pocket"
             description="Download the DStv app to easily manage your account, set reminders for upcoming shows, and even use your phone as a remote control."
@@ -369,7 +369,7 @@ const Page = () => {
         {/* DStv for Business */}
         <Section title="DStv for Business">
           <ImageSection
-            src="/images/dstv-for-business.jpg"
+            src="/images/placeholder-team.jpeg"
             alt="DStv for Business"
             title="Elevate Your Business with DStv"
             description="From hotels to restaurants, DStv offers tailored packages to enhance your customers&apos; experience and keep them entertained."
@@ -453,7 +453,7 @@ const Page = () => {
         {/* Community Initiatives */}
         <Section title="Supporting Our Community" bgColor="bg-gray-100">
           <ImageSection
-            src="/images/community-initiative.jpg"
+            src="/images/placeholder-sports.jpg"
             alt="DStv Community Initiative"
             title="Making a Difference Beyond Entertainment"
             description="DStv is committed to giving back to the community. Learn about our initiatives in education, healthcare, and environmental conservation."
@@ -479,7 +479,7 @@ const Page = () => {
             </div>
             <div>
               <Image
-                src="/images/satellite-tech.jpg"
+                src="/images/placeholder-series.avif"
                 alt="Satellite Technology"
                 width={500}
                 height={300}
@@ -533,7 +533,7 @@ const Page = () => {
           bgColor="bg-green-100"
         >
           <ImageSection
-            src="/images/sustainability.jpg"
+            src="/images/placeholder-series.avif"
             alt="DStv Sustainability Efforts"
             title="Entertaining Responsibly"
             description="Discover how DStv is working towards reducing our environmental impact and promoting sustainable practices in our operations."

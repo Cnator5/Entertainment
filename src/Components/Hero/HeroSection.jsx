@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-[70vh] overflow-hidden">
       <Image
-        src="/images/dstv_first.jpg"
+        src="/images/Dstv-Now-App.jpg"
         alt="DStv Banner"
         layout="fill"
         quality={100}
