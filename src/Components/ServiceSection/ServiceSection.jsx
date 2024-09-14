@@ -91,7 +91,7 @@ export default function Services() {
     {
       title: "Solar Panel Installation",
       description: "Harness the power of the sun with our solar panel installation service. We provide eco-friendly energy solutions tailored to your needs.",
-      imageSrc: "/images/solar-panel-installation.jpeg",
+      imageSrc: "/images/solar-gettyimages-525206743.webp",
       features: ["Eco-friendly energy solution", "Reduced electricity bills", "Government incentives available", "Professional installation and maintenance"],
       rating: 4.9,
       detailsLink: "https://www.energy.gov/eere/solar/homeowners-guide-going-solar"
