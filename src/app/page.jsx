@@ -39,8 +39,8 @@ export default function Home() {
   const images = [
     '/images/space-cosmic-illustration-with-planets-scene-created-with-generative-ai_115122-119500.avif',
     '/images/star_link_accessories_actuated_short_wall_mount top.webp',
+    '/images/myCANAL_16x9_Logotype_MEA_1920x1080.jpg80 (1).webp',
     '/images/solar.avif',
-    '/images/dstv.jpg',
     '/images/sport-football-arena-photography_1409-4807.avif',
     '/images/family-bonding-couch-watching-comedy-eating-popcorn_1111209-125749.jpg',
   ];

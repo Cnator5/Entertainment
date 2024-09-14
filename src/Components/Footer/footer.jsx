@@ -13,19 +13,20 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import styles from "./Footer.module.css";
 
 const SocialIcon = ({ href, Icon }) => (
   <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-    <Link href={href} className="text-white hover:text-blue-400 transition-colors">
-      <Icon className="w-6 h-6" />
+    <Link href={href} className={styles.socialIcon}>
+      <Icon className={styles.icon} />
     </Link>
   </motion.div>
 );
 
 const FooterLink = ({ href, children }) => (
   <li>
-    <Link href={href} className="hover:text-blue-400 transition-colors">
-      <motion.span whileHover={{ x: 5 }} className="inline-block">
+    <Link href={href} className={styles.footerLink}>
+      <motion.span whileHover={{ x: 5 }} className={styles.linkText}>
         {children}
       </motion.span>
     </Link>
@@ -37,9 +38,9 @@ const FooterSection = ({ title, children }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="mb-8 md:mb-0"
+    className={styles.footerSection}
   >
-    <h4 className="text-xl font-semibold mb-4 text-blue-400">{title}</h4>
+    <h4 className={styles.sectionTitle}>{title}</h4>
     {children}
   </motion.div>
 );
@@ -65,26 +66,16 @@ export default function Footer() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const SocialIcon = ({ href, Icon }) => (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
-    >
-      <Icon className="w-5 h-5" />
-    </Link>
-  );
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-12 relative">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
           <FooterSection title="About Us">
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl font-bold text-blue-400 mb-4"
+              className={styles.companyName}
             >
               AbaSatellite
             </motion.h3>
@@ -92,25 +83,25 @@ export default function Footer() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-4"
+              className={styles.companyDescription}
             >
               Bringing cutting-edge connectivity and entertainment solutions to your doorstep. Experience the future of communication with AbaSatellite.
             </motion.p>
             <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
-      className="flex space-x-4"
-    >
-      <SocialIcon href="https://facebook.com" Icon={FaFacebookF} />
-      <SocialIcon href="https://twitter.com" Icon={FaTwitter} />
-      <SocialIcon href="https://instagram.com" Icon={FaInstagram} />
-      <SocialIcon href="https://linkedin.com" Icon={FaLinkedinIn} />
-    </motion.div>
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className={styles.socialIcons}
+            >
+              <SocialIcon href="https://facebook.com" Icon={FaFacebookF} />
+              <SocialIcon href="https://twitter.com" Icon={FaTwitter} />
+              <SocialIcon href="https://instagram.com" Icon={FaInstagram} />
+              <SocialIcon href="https://linkedin.com" Icon={FaLinkedinIn} />
+            </motion.div>
           </FooterSection>
 
           <FooterSection title="Quick Links">
-            <ul className="space-y-2">
+            <ul className={styles.linkList}>
               <FooterLink href="/">Home</FooterLink>
               <FooterLink href="/about">About Us</FooterLink>
               <FooterLink href="/services">Services</FooterLink>
@@ -121,7 +112,7 @@ export default function Footer() {
           </FooterSection>
 
           <FooterSection title="Our Services">
-            <ul className="space-y-2">
+            <ul className={styles.linkList}>
               <FooterLink href="/services/starlink-installation">Starlink Installation</FooterLink>
               <FooterLink href="/services/canal-plus-subscription">Canal+ Subscription</FooterLink>
               <FooterLink href="/services/dstv-setup">DStv Setup</FooterLink>
@@ -132,43 +123,43 @@ export default function Footer() {
           </FooterSection>
 
           <FooterSection title="Contact Us">
-            <ul className="space-y-2">
+            <ul className={styles.contactList}>
               <motion.li
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex items-center"
+                className={styles.contactItem}
               >
-                <FaMapMarkerAlt className="mr-2 text-blue-400" />
+                <FaMapMarkerAlt className={styles.contactIcon} />
                 <span>237 Connectivity Street, Molyko, Buea</span>
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="flex items-center"
+                className={styles.contactItem}
               >
-                <FaPhone className="mr-2 text-blue-400" />
+                <FaPhone className={styles.contactIcon} />
                 <span>(237) 681 326 315</span>
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex items-center"
+                className={styles.contactItem}
               >
-                <FaEnvelope className="mr-2 text-blue-400" />
+                <FaEnvelope className={styles.contactIcon} />
                 <span>info@abasatellite.com</span>
               </motion.li>
             </ul>
             <Link href="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
-            >
-              Get a Quote
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={styles.quoteButton}
+              >
+                Get a Quote
+              </motion.button>
             </Link>
           </FooterSection>
         </div>
@@ -177,15 +168,15 @@ export default function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="border-t border-gray-800 mt-8 pt-8 text-center"
+          className={styles.bottomBar}
         >
           <p>&copy; {currentYear} AbaSatellite. All rights reserved.</p>
-          <p className="mt-2 text-sm text-gray-400">
+          <p className={styles.bottomLinks}>
             Designed with ❤️ by AbaSatellite Team | 
-            <Link href="/privacy-policy" className="ml-1 hover:text-blue-400 transition-colors">
+            <Link href="/privacy-policy" className={styles.bottomLink}>
               Privacy Policy
             </Link> | 
-            <Link href="/terms-of-service" className="ml-1 hover:text-blue-400 transition-colors">
+            <Link href="/terms-of-service" className={styles.bottomLink}>
               Terms of Service
             </Link>
           </p>
@@ -198,7 +189,7 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
+            className={styles.scrollTopButton}
           >
             <FaArrowUp />
           </motion.button>

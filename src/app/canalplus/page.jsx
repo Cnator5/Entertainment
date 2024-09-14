@@ -1,8 +1,11 @@
+"use client"
+import { useState } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
@@ -15,23 +18,31 @@ export default function Page() {
           <Link href="/">
             <button className="text-2xl font-bold">Canal+ Experts</button>
           </Link>
-          <ul className="flex space-x-6">
-            <li>
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="focus:outline-none"
+            >
+              {isOpen ? '✖' : '☰'}
+            </button>
+          </div>
+          <ul className={`md:flex space-x-6 md:block ${isOpen ? 'fixed left-0 top-0 w-64 bg-black p-4 h-full z-50' : 'hidden'} md:static`}>
+            <li className="py-2">
               <Link href="/packages">
                 <button className="hover:text-gray-300">Packages</button>
               </Link>
             </li>
-            <li>
+            <li className="py-2">
               <Link href="/installation">
                 <button className="hover:text-gray-300">Installation</button>
               </Link>
             </li>
-            <li>
+            <li className="py-2">
               <Link href="/about">
                 <button className="hover:text-gray-300">About Us</button>
               </Link>
             </li>
-            <li>
+            <li className="py-2">
               <Link href="/contact">
                 <button className="hover:text-gray-300">Contact</button>
               </Link>
@@ -39,6 +50,7 @@ export default function Page() {
           </ul>
         </nav>
       </header>
+ 
 
       <main>
       {/* Hero Section */}
@@ -113,23 +125,23 @@ export default function Page() {
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-semibold mb-4">Basic</h3>
                 <p className="text-4xl font-bold mb-4">
-                  $29.99<span className="text-sm font-normal">/month</span>
+                  5000 FCFA<span className="text-sm font-normal">/month</span>
                 </p>
                 <ul className="mb-8">
                   <li className="mb-2">✓ 50+ channels</li>
                   <li className="mb-2">✓ HD quality</li>
                   <li className="mb-2">✓ 7-day replay</li>
                 </ul>
-                <Link href="contact">
+                {/* <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
-                </Link>
+                </Link> */}
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-blue-600">
                 <h3 className="text-2xl font-semibold mb-4">Premium</h3>
                 <p className="text-4xl font-bold mb-4">
-                  $49.99<span className="text-sm font-normal">/month</span>
+                  10000 FCFA<span className="text-sm font-normal">/month</span>
                 </p>
                 <ul className="mb-8">
                   <li className="mb-2">✓ 100+ channels</li>
@@ -137,16 +149,16 @@ export default function Page() {
                   <li className="mb-2">✓ 30-day replay</li>
                   <li className="mb-2">✓ Exclusive sports events</li>
                 </ul>
-                <Link href="contact">
+                {/* <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
-                </Link>
+                </Link> */}
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-semibold mb-4">Family</h3>
                 <p className="text-4xl font-bold mb-4">
-                  $69.99<span className="text-sm font-normal">/month</span>
+                  15000 FCFA<span className="text-sm font-normal">/month</span>
                 </p>
                 <ul className="mb-8">
                   <li className="mb-2">✓ 150+ channels</li>
@@ -155,11 +167,11 @@ export default function Page() {
                   <li className="mb-2">✓ Multiple device streaming</li>
                   <li className="mb-2">✓ Parental controls</li>
                 </ul>
-                <Link href="contact">
+                {/* <Link href="contact">
                   <button className="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Subscribe Now
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
