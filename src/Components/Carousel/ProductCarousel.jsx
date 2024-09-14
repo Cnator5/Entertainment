@@ -45,7 +45,7 @@ const products = [
     price: '75 000FCFA',
   },
   {
-    name: 'Solar Panel System',
+    name: 'Solar',
     icon: FaSolarPanel,
     image: '/images/solar-gettyimages-525206743.webp',
     description: 'Harness the power of the sun with our efficient solar panel systems.',
