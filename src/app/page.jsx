@@ -9,6 +9,7 @@ import WhyChooseUsSection from '@/Components/WhyChooseUsSection/WhyChooseUsSecti
 // import ProductsSection from '@/Components/ImageShowcaseSection/ImageShowcaseSection';
 import Services from '@/Components/ServiceSection/ServiceSection';
 import ImageShowcaseSection from '@/Components/ImageShowcaseSection/ImageShowcaseSection';
+import ProductCarousel from '@/Components/Carousel/ProductCarousel';
 
 
 export default function Home() {
@@ -126,6 +127,7 @@ export default function Home() {
                 `}</style>
     
     </div>
+    <ProductCarousel/>
     <ImageShowcaseSection />
 <WhyChooseUsSection/>
 <Services/>
