@@ -1,4 +1,5 @@
 "use client"
+
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -24,21 +25,22 @@ const ServiceSection = ({ title, description, imageSrc, index, features, rating,
               width={500} 
               height={300} 
               className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              priority={index === 0}
             />
           </div>
           <div className="lg:w-1/2 lg:px-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">{title}</h2>
             <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4" aria-label={`Rating: ${rating.toFixed(1)} out of 5 stars`}>
               {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className={`${i < rating ? 'text-yellow-400' : 'text-gray-300'} mr-1`} />
+                <FaStar key={i} className={`${i < rating ? 'text-yellow-400' : 'text-gray-300'} mr-1`} aria-hidden="true" />
               ))}
               <span className="ml-2 text-gray-600">{rating.toFixed(1)} out of 5</span>
             </div>
             <ul className="mb-6">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center text-gray-600 mb-2">
-                  <FaInfoCircle className="mr-2 text-blue-500" />
+                  <FaInfoCircle className="mr-2 text-blue-500" aria-hidden="true" />
                   {feature}
                 </li>
               ))}
@@ -46,12 +48,12 @@ const ServiceSection = ({ title, description, imageSrc, index, features, rating,
             <div className="flex flex-wrap gap-4">
               <Link href={detailsLink} target="_blank" rel="noopener noreferrer">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center">
-                  <FaExternalLinkAlt className="mr-2" />
+                  <FaExternalLinkAlt className="mr-2" aria-hidden="true" />
                   View Details
                 </button>
               </Link>
               <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 flex items-center">
-                <FaPhone className="mr-2" />
+                <FaPhone className="mr-2" aria-hidden="true" />
                 Contact Us
               </Link>
             </div>
@@ -98,11 +100,51 @@ export default function Services() {
     }
   ];
 
+  useEffect(() => {
+    // Implement smooth scroll
+    const smoothScroll = (e) => {
+      e.preventDefault();
+      const href = e.currentTarget.getAttribute('href');
+      document.querySelector(href).scrollIntoView({
+        behavior: 'smooth'
+      });
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', smoothScroll);
+    });
+
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('click', smoothScroll);
+      });
+    };
+  }, []);
+
   return (
     <>
       <Head>
         <title>Our Services - AbaSatellite</title>
         <meta name="description" content="Explore our range of services including Starlink Installation, Canal+ Subscription, DStv Setup, and Solar Panel Installation." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": services.map((service, index) => ({
+              "@type": "Service",
+              "position": index + 1,
+              "name": service.title,
+              "description": service.description,
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": service.rating,
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            }))
+          })}
+        </script>
       </Head>
 
       <main className="bg-gray-100">
@@ -130,4 +172,3 @@ export default function Services() {
     </>
   );
 }
-

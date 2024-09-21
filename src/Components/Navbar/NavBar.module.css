@@ -268,3 +268,26 @@
     }
   }
   
+  .cartIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cartCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .mobileNavLink {
+    /* existing styles */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

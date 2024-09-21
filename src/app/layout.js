@@ -1,9 +1,10 @@
-// app/layout.js
 import { Inter } from "next/font/google";
 import Footer from "@/Components/Footer/footer";
 import "./globals.css";
 import 'tailwindcss/tailwind.css';
 import NavBar from './../Components/Navbar/NavBar';
+import LiveChat from "@/Components/LiveChat/LiveChat";
+import { CartProvider } from './lib/cartContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,11 +29,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <NavBar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <CartProvider>
+          <NavBar />
+          <main className="flex-grow">
+            {children}
+            <LiveChat/>
+          </main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

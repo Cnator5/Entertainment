@@ -1,0 +1,7 @@
+/* LiveChat.css */
+@media (max-width: 640px) {
+    .livechat-container {
+      left: 1rem;
+      right: 1rem;
+    }
+  }
